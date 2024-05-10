@@ -58,6 +58,10 @@ jobs:
       run: |
         choco install monogame -y
 
+    - name: Install .NET Framework 4.5 Developer Pack
+      run: |
+        choco install netfx-4.5-devpack -y
+
     - name: Build and Package
       run: |
             dotnet build "Gamemaker-Sharp.csproj"  --configuration Release
