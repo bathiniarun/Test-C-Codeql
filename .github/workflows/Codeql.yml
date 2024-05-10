@@ -63,10 +63,8 @@ jobs:
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         queries: security-extended,security-and-quality
 
-    - name: Setup .NET Framework
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '4.5'  # Specify the .NET Framework version
+    - name: Checkout the code
+      uses: actions/checkout@v3
 
     - name: Restore NuGet packages
       run: nuget restore
