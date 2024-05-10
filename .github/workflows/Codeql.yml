@@ -60,7 +60,7 @@ jobs:
 
     - name: Build and Package
       run: |
-            dotnet build "Gamemaker-Sharp.sln"  --configuration Release
+            dotnet build "Gamemaker-Sharp.csproj"  --configuration Release
             
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
