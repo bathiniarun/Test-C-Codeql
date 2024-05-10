@@ -55,7 +55,6 @@ jobs:
       run: |
         choco install monogame -y
     - name: Install .NET Framework 4.5 Developer Pack
-      if: matrix.os == 'windows-latest'  # Only install on Windows runner
       run: |
         choco install netfx-4.5-devpack -y
    
