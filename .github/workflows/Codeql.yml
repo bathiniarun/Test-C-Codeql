@@ -3,9 +3,9 @@ name: "CodeQL Analysis"
 on:
   # Triggers the workflow on push or pull request events on the main branch
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   # Schedule a daily scan (at 8am UTC)
   schedule:
     - cron: '0 8 * * *'
