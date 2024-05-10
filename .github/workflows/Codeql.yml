@@ -61,7 +61,7 @@ jobs:
 
     # Build the project with MSBuild
     - name: Build the project
-      run: msbuild /p:Configuration=Release
+      run: dotnet build "Gamemaker-Sharp.sln"  --configuration Release
 
     # Perform CodeQL Analysis
     - name: Perform CodeQL Analysis
