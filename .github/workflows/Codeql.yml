@@ -54,14 +54,18 @@ jobs:
       if: matrix.os == 'windows-latest'
       run: |
         choco install monogame -y
-
+    - name: Install .NET Framework 4.5 Developer Pack
+      if: matrix.os == 'windows-latest'  # Only install on Windows runner
+      run: |
+        choco install netfx-4.5-devpack -y
+   
     # Restore NuGet packages for the project
     - name: Restore NuGet packages
       run: nuget restore
 
     # Build the project with MSBuild
     - name: Build the project
-      run: dotnet build "Gamemaker-Sharp.sln"  --configuration Release
+      run: msbuild "Gamemaker-Sharp.sln"  --configuration Release
 
     # Perform CodeQL Analysis
     - name: Perform CodeQL Analysis
